@@ -1,4 +1,5 @@
-import React from "react";
+import AOS from "aos/dist/aos.js";
+import "aos/dist/aos.css";
 import { Outlet } from "react-router-dom";
 
 const Root = () => {

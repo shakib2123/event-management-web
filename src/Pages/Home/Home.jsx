@@ -1,16 +1,25 @@
 import Banner from "../../Components/Banner/Banner";
+import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
+import Services from "../../Components/Services/Services";
 import "../Register/Register.css";
 const Home = () => {
   return (
-    <div
-      style={{
-        backgroundImage: "url(https://i.ibb.co/YPppvMK/Banner3.jpg)",
-      }}
-      className="h-screen hole-container bg-no-repeat bg-cover"
-    >
-      <Navbar></Navbar>
-      <Banner></Banner>
+    <div>
+      <div
+        style={{
+          backgroundImage: "url(https://i.ibb.co/PD8zq8M/epic-bg.jpg)",
+        }}
+        className="h-screen hole-container bg-no-repeat bg-cover"
+      >
+        <Navbar></Navbar>
+        <Banner></Banner>
+      </div>
+
+      <div>
+        <Services></Services>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };
