@@ -1,0 +1,13 @@
+.hole-container {
+  animation: animateBg 5s linear infinite;
+}
+@keyframes animateBg {
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -4px;
+}
