@@ -10,13 +10,7 @@ const navLinks = (
     </li>
 
     <li className="p-2 font-medium text-lg">
-      <NavLink to="/pages">Pages</NavLink>
-    </li>
-    <li className="p-2 font-medium text-lg">
-      <NavLink to="/feature">Features</NavLink>
-    </li>
-    <li className="p-2 font-medium text-lg">
-      <NavLink to="/blog">Blog</NavLink>
+      <NavLink to="/developers">Developers</NavLink>
     </li>
     <li className="p-2 font-medium text-lg">
       <NavLink to="/shop">Shop</NavLink>
@@ -31,7 +25,7 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <div className="w-full py-5 lg:backdrop-blur-lg border-b">
+    <div className="w-full py-5 lg:backdrop-blur-lg lg:border-b">
       <div className="navbar bg-transparent  text-white max-w-7xl mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">

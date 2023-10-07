@@ -15,7 +15,7 @@ const Builders = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <figure
             className="max-w-xl"
-            data-aos="fade-left"
+            data-aos="fade-up"
             data-aos-anchor-placement="top-bottom"
           >
             <img
@@ -23,7 +23,7 @@ const Builders = () => {
               className="w-full rounded-lg shadow-2xl"
             />
           </figure>
-          <div data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+          <div data-aos="fade-down" data-aos-anchor-placement="top-bottom">
             <h1 className="text-5xl font-bold">
               Find your perfect creative match!
             </h1>

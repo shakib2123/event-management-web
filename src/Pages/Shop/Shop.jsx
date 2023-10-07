@@ -12,7 +12,7 @@ const Shop = () => {
     setProducts(localItemAdded);
   }, []);
   return (
-    <div className="bg-[#000024]">
+    <div className="min-h-screen">
       <Navbar></Navbar>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-16 gap-4">
         {isShow
@@ -25,14 +25,16 @@ const Shop = () => {
                 <ShopCard key={product.product_id} product={product}></ShopCard>
               ))}
       </div>
-      <div className="flex justify-center pb-9">
-        <button
-          onClick={() => setIsShow(!isShow)}
-          className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300"
-        >
-          {isShow ? "See Less" : "Show More"}
-        </button>
-      </div>
+      {products && products.length > 3 && (
+        <div className="flex justify-center pb-9">
+          <button
+            onClick={() => setIsShow(!isShow)}
+            className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300"
+          >
+            {isShow ? "See Less" : "Show More"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };

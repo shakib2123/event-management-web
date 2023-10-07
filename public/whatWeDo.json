@@ -1,48 +1,48 @@
 [
   {
-    "service_id": 1,
+    "service_id": "1",
     "service_name": "Web Development and Design Services",
     "description": "Offer website development and design services to help businesses establish a strong online presence.",
     "image_url": "https://i.ibb.co/1Rq56M9/programming-background.jpg"
   },
   {
-    "service_id": 2,
+    "service_id": "2",
     "service_name": "Managed Hosting",
     "description": "Provide managed hosting services for websites and applications, ensuring high performance, security, and reliability.",
     "image_url": "https://i.ibb.co/wcDkDTB/website-hosting.jpg"
   },
   {
-    "service_id": 3,
+    "service_id": "3",
     "service_name": "Cloud Computing Solutions",
     "description": "Help clients leverage cloud platforms like AWS, Azure, or Google Cloud to scale their infrastructure and optimize costs.",
     "image_url": "https://i.ibb.co/JHZJTMx/cloud-computing.jpg"
   },
   {
-    "service_id": 4,
+    "service_id": "4",
     "service_name": "Cybersecurity Services",
     "description": "Offer cybersecurity assessments, penetration testing, and solutions to protect clients' digital assets from threats and breaches.",
     "image_url": "https://i.ibb.co/rprLng6/cyber-security.jpg"
   },
   {
-    "service_id": 5,
+    "service_id": "5",
     "service_name": "Mobile App Development",
     "description": "Develop mobile applications for iOS and Android platforms to cater to the growing mobile user base.",
     "image_url": "https://i.ibb.co/fnjccDc/mobile-app-development-companies.jpg"
   },
   {
-    "service_id": 6,
+    "service_id": "6",
     "service_name": "SEO and Digital Marketing",
     "description": "Help clients improve their online visibility through search engine optimization (SEO) and digital marketing strategies.",
     "image_url": "https://i.ibb.co/PWJxWDD/Banner-Image.jpg"
   },
   {
-    "service_id": 7,
+    "service_id": "7",
     "service_name": "E-commerce Solutions",
     "description": "Build and maintain e-commerce platforms for businesses looking to sell products or services online.",
     "image_url": "https://i.ibb.co/hZS6mJZ/e-commerce-solutions.jpg"
   },
   {
-    "service_id": 8,
+    "service_id": "8",
     "service_name": "Tech Consulting and Training",
     "description": "Provide consulting services to guide clients in making informed technology decisions.",
     "image_url": "https://i.ibb.co/1M5kFH7/tech-consulting-and-training.jpg"

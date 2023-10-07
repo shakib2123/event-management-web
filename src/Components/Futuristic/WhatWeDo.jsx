@@ -3,18 +3,11 @@ import { BsBoxArrowInRight } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-const aosAnimations = [
-  "fade-up",
-  "fade-left",
-  "fade-right",
-  "fade-down",
-  "zoom-in",
-  "zoom-out",
-];
+const aosAnimations = ["fade-up", "fade-down"];
 const Futuristic = () => {
   const [futuristic, setFuturistic] = useState([]);
   useEffect(() => {
-    fetch("/futuristic.json")
+    fetch("/whatWeDo.json")
       .then((res) => res.json())
       .then((data) => setFuturistic(data));
   }, []);
@@ -32,7 +25,7 @@ const Futuristic = () => {
           data-aos-anchor-placement="top-bottom"
           className="text-center font-medium text-3xl md:text-5xl"
         >
-          Our futuristic services!
+          What We Do
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 md:my-8">
@@ -59,7 +52,10 @@ const Futuristic = () => {
                 </p>
               </div>
               <div className="p-6 pt-0">
-                <Link className="font-medium text-blue-gray-900 transition-colors hover:text-pink-500">
+                <Link
+                  to={`/whatWeDo/${service.service_id}`}
+                  className="font-medium text-blue-gray-900 transition-colors hover:text-pink-500"
+                >
                   <button
                     className="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                     type="button"

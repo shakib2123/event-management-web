@@ -2,7 +2,7 @@ import Banner from "../../Components/Banner/Banner";
 import Builders from "../../Components/Builders/Builders";
 import Footer from "../../Components/Footer/Footer";
 import Navbar from "../../Components/Navbar/Navbar";
-import Futuristic from "../../Components/Futuristic/Futuristic";
+import Futuristic from "../../Components/Futuristic/WhatWeDo";
 
 import "../Register/Register.css";
 import Services from "../../Components/Services/Services";

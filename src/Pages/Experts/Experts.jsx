@@ -7,30 +7,20 @@ import "aos/dist/aos.css";
 const aosAnimations = [
   "fade-up",
   "fade-down",
-  "fade-left",
-  "fade-right",
-  "fade-up-right",
-  "fade-up-left",
-  "fade-down-right",
-  "fade-down-left",
-  "zoom-in",
-  "zoom-out",
-  "flip-up",
-  "flip-down",
 ];
 const Experts = () => {
   const experts = useLoaderData();
- useEffect(() => {
-   AOS.init({
-     duration: 1000,
-   });
- }, []);
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
     <div>
       <Navbar></Navbar>
       <div className="py-6 md:py-10 px-3">
         <h1 className="text-4xl font-medium text-center mb-10">
-          Our Experts!!!
+          Our Experts Always With You For Your Help!
         </h1>
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

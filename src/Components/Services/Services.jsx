@@ -3,7 +3,7 @@ import { BsBoxArrowInRight } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-const aosAnimations = ["fade-right", "fade-up", "fade-left"];
+const aosAnimations = ["fade-up", "fade-down"];
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -18,7 +18,10 @@ const Services = () => {
   }, []);
   return (
     <div className="max-w-7xl mx-auto py-8 lg:my-16 px-3 border-b">
-      <div className="max-w-3xl mx-auto text-center space-y-4">
+      <div
+        data-aos="fade-down"
+        className="max-w-3xl mx-auto text-center space-y-4"
+      >
         <h1 className="text-2xl md:text-5xl font-medium text-center">
           Our services and sale!
         </h1>

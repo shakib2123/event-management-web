@@ -1,0 +1,48 @@
+import { useEffect, useState } from "react";
+import Navbar from "../../Components/Navbar/Navbar";
+import DeveloperCard from "./DeveloperCard";
+
+const Developers = () => {
+  const [developers, setDevelopers] = useState([]);
+  const [isShow, setIsShow] = useState(false);
+  useEffect(() => {
+    const localAddedDeveloper = JSON.parse(localStorage.getItem("developers"));
+    setDevelopers(localAddedDeveloper);
+  }, []);
+  return (
+    <div className="min-h-screen">
+      <Navbar></Navbar>
+      <div className="max-w-7xl mx-auto my-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {isShow
+            ? developers?.map((developer) => (
+                <DeveloperCard
+                  key={developer.developer_id}
+                  developer={developer}
+                ></DeveloperCard>
+              ))
+            : developers
+                ?.slice(0, 4)
+                .map((developer) => (
+                  <DeveloperCard
+                    key={developer.developer_id}
+                    developer={developer}
+                  ></DeveloperCard>
+                ))}
+        </div>
+      </div>
+      {developers && developers.length > 4 && (
+        <div className="flex justify-center pb-8">
+          <button
+            onClick={() => setIsShow(!isShow)}
+            className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300"
+          >
+            {isShow ? "See Less" : "Show More"}
+          </button>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Developers;

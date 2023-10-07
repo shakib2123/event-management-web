@@ -7,6 +7,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Experts from "../Pages/Experts/Experts";
 import ServiceDetail from "../Components/Services/ServiceDetail";
 import Shop from "../Pages/Shop/Shop";
+import WhatWeDoCardDetails from "../Components/Futuristic/WhatWeDoCardDetails";
+import Developers from "../Pages/Developers/Developers";
 
 const Router = createBrowserRouter([
   {
@@ -39,6 +41,15 @@ const Router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
+      },
+      {
+        path: "/whatWeDo/:id",
+        loader: () => fetch("/whatWeDo.json"),
+        element: <WhatWeDoCardDetails></WhatWeDoCardDetails>,
+      },
+      {
+        path: "/developers",
+        element: <Developers></Developers>,
       },
     ],
   },

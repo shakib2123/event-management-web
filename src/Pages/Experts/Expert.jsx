@@ -1,9 +1,37 @@
 import { BsBoxArrowInRight } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import swal from "sweetalert";
 
 const Expert = ({ expert, animation }) => {
-  const { experience, image_url, developer_name, specialization, description } =
-    expert;
+  const {
+    experience,
+    image_url,
+    developer_name,
+    specialization,
+    description,
+    developer_id,
+  } = expert;
+  const handleHire = () => {
+    const developerArrow = [];
+    const localAddedDeveloper = JSON.parse(localStorage.getItem("developers"));
+    if (!localAddedDeveloper) {
+      developerArrow.push(expert);
+      localStorage.setItem("developers", JSON.stringify(developerArrow));
+      swal("Success", "Successfully added in cart!", "success");
+    } else {
+      const isExist = localAddedDeveloper.find(
+        (item) => item.developer_id === developer_id
+      );
+      console.log(isExist);
+      if (!isExist) {
+        localAddedDeveloper.push(expert);
+        localStorage.setItem("developers", JSON.stringify(localAddedDeveloper));
+        swal("Success!", "Successfully hired!", "success");
+      } else {
+        swal("Duplicate!", "Already hired.", "error");
+      }
+    }
+  };
+
   return (
     <div
       data-aos={animation}
@@ -18,12 +46,13 @@ const Expert = ({ expert, animation }) => {
         <h2 className="card-title text-pink-600">{experience}!</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <Link>
-            <button className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300">
-              See More
-              <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
-            </button>
-          </Link>
+          <button
+            onClick={() => handleHire()}
+            className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300"
+          >
+            Hire Now
+            <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
+          </button>
         </div>
       </div>
     </div>
