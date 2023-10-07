@@ -31,7 +31,7 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <div className="w-full py-5 lg:backdrop-blur-lg">
+    <div className="w-full py-5 lg:backdrop-blur-lg border-b">
       <div className="navbar bg-transparent  text-white max-w-7xl mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">

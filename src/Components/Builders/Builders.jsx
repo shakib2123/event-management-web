@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { BsBoxArrowInRight } from "react-icons/bs";
 import { useEffect } from "react";
 const Builders = () => {
   useEffect(() => {
@@ -24,7 +25,7 @@ const Builders = () => {
           </figure>
           <div data-aos="fade-right" data-aos-anchor-placement="top-bottom">
             <h1 className="text-5xl font-bold">
-              Find your perfect creative match
+              Find your perfect creative match!
             </h1>
             <p className="py-6">
               As the world largest and most far-reaching network of exceptional
@@ -32,7 +33,10 @@ const Builders = () => {
               critical projects with ease.
             </p>
             <Link to="/experts">
-              <button className="btn btn-primary">Find A Developer</button>
+              <button className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300">
+                Find A Developer{" "}
+                <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
+              </button>
             </Link>
           </div>
         </div>

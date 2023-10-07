@@ -1,6 +1,7 @@
 import { BsBoxArrowInRight } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-const Expert = ({ expert, animation}) => {
+const Expert = ({ expert, animation }) => {
   const { experience, image_url, developer_name, specialization, description } =
     expert;
   return (
@@ -14,12 +15,15 @@ const Expert = ({ expert, animation}) => {
       </figure>
       <div className="card-body w-96">
         <h2 className="card-title">{developer_name}</h2>
+        <h2 className="card-title text-pink-600">{experience}!</h2>
         <p>{description}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300">
-            Read More{" "}
-            <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
-          </button>
+          <Link>
+            <button className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300">
+              See More
+              <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

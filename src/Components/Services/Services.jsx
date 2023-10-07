@@ -1,14 +1,9 @@
 import { useEffect, useState } from "react";
+import { BsBoxArrowInRight } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
-const aosAnimations = [
-  "fade-up",
-  "fade-left",
-  "fade-right",
-  "fade-down",
-  "zoom-in",
-  "zoom-out",
-];
+import { Link } from "react-router-dom";
+const aosAnimations = ["fade-right", "fade-up", "fade-left"];
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -16,74 +11,51 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
-     useEffect(() => {
-       AOS.init({
-         duration: 1000,
-       });
-     }, []);
-
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
-    <div className="max-w-7xl mx-auto my-8 md:my-16 px-3">
-      <div>
-        <h2
-          data-aos="fade-up"
-          data-aos-anchor-placement="top-bottom"
-          className="text-center font-medium text-3xl md:text-5xl"
-        >
-          Our services for client.
-        </h2>
+    <div className="max-w-7xl mx-auto py-8 lg:my-16 px-3 border-b">
+      <div className="max-w-3xl mx-auto text-center space-y-4">
+        <h1 className="text-2xl md:text-5xl font-medium text-center">
+          Our services and sale!
+        </h1>
+        <p className=" text-lg">
+          Discover a range of cutting-edge tech products designed to elevate
+          your digital experience. From high-performance smartphones to sleek
+          laptops, true wireless earbuds, stylish smartwatches, and more, we
+          offer a diverse selection of gadgets to meet your modern lifestyle
+          needs. Explore our collection and immerse yourself in innovation.
+        </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 md:my-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-16 gap-4">
         {services.map((service, index) => (
-          <div 
+          <div
             data-aos={aosAnimations[index % aosAnimations.length]}
             data-aos-anchor-placement="top-bottom"
-            className="border border-gray-300 rounded-xl"
-            key={service.service_id}
-            style={{
-              backgroundImage: `url(${service.image_url})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
+            key={service.product_id}
+            className="card glass hover:bg-gradient-to-l from-pink-600 text-gray-200"
           >
-            <div className="relative h-full w-full rounded-xl bg-transparent bg-clip-border text-gray-100 shadow-md backdrop-blur-md flex flex-col">
-              <div className="p-6 flex-grow">
-                <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                  {service.service_name}
-                </h5>
-                <p className="block font-sans text-base leading-relaxed text-inherit antialiased">
-                  {service.description}
-                </p>
-              </div>
-              <div className="p-6 pt-0">
-                <a
-                  className="font-medium text-blue-gray-900 transition-colors hover:text-pink-500"
-                  href=""
-                >
-                  <button
-                    className="flex select-none items-center gap-2 rounded-lg py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-pink-500 transition-all hover:bg-pink-500/10 active:bg-pink-500/30 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-                    type="button"
-                    data-ripple-dark="true"
-                  >
-                    Learn More
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth="2"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                      className="h-4 w-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
-                      ></path>
-                    </svg>
+            <figure className="h-60 w-full">
+              <img
+                className="h-full w-full"
+                src={service.image_url}
+                alt={service?.product_name}
+              />
+            </figure>
+            <div className="card-body">
+              <h2 className="card-title text-2xl">{service.product_name}</h2>
+              <h2 className="card-title text-xl">${service.price}</h2>
+              <p className="text-lg">{service.description}</p>
+              <div className="card-actions justify-end">
+                <Link to={`/serviceDetail/${service.product_id}`}>
+                  <button className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300">
+                    See Details
+                    <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
                   </button>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -28,15 +28,20 @@ const Experts = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="max-w-7xl mx-auto py-6 md:py-16 px-3">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {experts.map((expert, index) => (
-            <Expert
-              key={expert.developer_id}
-              expert={expert}
-              animation={aosAnimations[index % aosAnimations.length]}
-            ></Expert>
-          ))}
+      <div className="py-6 md:py-10 px-3">
+        <h1 className="text-4xl font-medium text-center mb-10">
+          Our Experts!!!
+        </h1>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {experts.map((expert, index) => (
+              <Expert
+                key={expert.developer_id}
+                expert={expert}
+                animation={aosAnimations[index % aosAnimations.length]}
+              ></Expert>
+            ))}
+          </div>
         </div>
       </div>
     </div>

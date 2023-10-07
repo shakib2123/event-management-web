@@ -9,7 +9,7 @@ const Footer = () => {
       <footer className="footer p-10  bg-transparent max-w-7xl mx-auto text-white">
         <aside>
           <p className="text-center">
-            <span className="text-4xl font-medium">TECH HUB Ltd.</span>
+            <span className="text-4xl font-medium">TECH WISE Ltd.</span>
             <br />
             <span className="text-lg font-semibold">
               Providing reliable tech since 1992
@@ -38,7 +38,7 @@ const Footer = () => {
         </nav>
       </footer>
       <p className="text-gray-200 text-center pb-4">
-        Copyright © 2023 - All right reserved by TECH_HUB Ltd
+        Copyright © 2023 - All right reserved by TECH WISE Ltd
       </p>
     </div>
   );
