@@ -1,0 +1,98 @@
+[
+  {
+    "developer_id": 1,
+    "experience": "4 years of experienced",
+    "developer_name": "John Smith",
+    "specialization": "Front-end Developer",
+    "description": "Experienced front-end developer with expertise in HTML, CSS, and JavaScript. Passionate about creating user-friendly.",
+    "image_url": "https://i.ibb.co/XLqTcqY/developer1.webp"
+  },
+  {
+    "developer_id": 2,
+    "experience": "3 years of experienced",
+    "developer_name": "Emily Davis",
+    "specialization": "Back-end Developer",
+    "description": "Back-end developer with a focus on server-side scripting and database management. Proficient in Node.js, Python, and SQL.",
+    "image_url": "https://i.ibb.co/fp6yJcz/developer2.jpg"
+  },
+  {
+    "developer_id": 3,
+    "experience": "5 years of experienced",
+    "developer_name": "Michael Johnson",
+    "specialization": "Full-stack Developer",
+    "description": "Full-stack developer with experience in both front-end and back-end technologies. Skilled in React, Node.js, and MongoDB.",
+    "image_url": "https://i.ibb.co/qy9KYZd/developer3.jpg"
+  },
+  {
+    "developer_id": 4,
+    "experience": "2.5 years of experienced",
+    "developer_name": "Sophia Lee",
+    "specialization": "Mobile App Developer",
+    "description": "Mobile app developer specializing in iOS and Android app development. Proficient in Swift, Kotlin, and React Native.",
+    "image_url": "https://i.ibb.co/16hds8G/developer4.jpg"
+  },
+  {
+    "developer_id": 5,
+    "experience": "3 years of experienced",
+    "developer_name": "Daniel Garcia",
+    "specialization": "UI/UX Designer",
+    "description": "UI/UX designer with a strong eye for aesthetics and user experience. Skilled in Adobe XD, Figma, and prototyping tools.",
+    "image_url": "https://i.ibb.co/br8KJgj/developer5.jpg"
+  },
+  {
+    "developer_id": 6,
+    "experience": "3.4 years of experienced",
+    "developer_name": "Olivia Wilson",
+    "specialization": "Data Scientist",
+    "description": "Data scientist with expertise in data analysis, machine learning, and predictive modeling. Proficient in Python and R.",
+    "image_url": "https://i.ibb.co/k8rBG7Q/developer6.jpg"
+  },
+  {
+    "developer_id": 7,
+    "experience": "4 years of experienced",
+    "developer_name": "William Brown",
+    "specialization": "DevOps Engineer",
+    "description": "DevOps engineer focused on automating deployment processes and ensuring continuous integration. Proficient in Docker and Jenkins.",
+    "image_url": "https://i.ibb.co/dJtcTsm/developer7.jpg"
+  },
+  {
+    "developer_id": 8,
+    "experience": "4.2 years of experienced",
+    "developer_name": "Ava Martinez",
+    "specialization": "Cloud Architect",
+    "description": "Cloud architect specializing in designing scalable and secure cloud infrastructure. Experienced with AWS, Azure, and Google Cloud.",
+    "image_url": "https://i.ibb.co/sJnNVzW/developer8.jpg"
+  },
+  {
+    "developer_id": 9,
+    "experience": "6 years of experienced",
+    "developer_name": "Liam Miller",
+    "specialization": "Game Developer",
+    "description": "Game developer with a passion for creating immersive gaming experiences. Proficient in Unity and Unreal Engine.",
+    "image_url": "https://i.ibb.co/gTQvCxF/developer9.jpg"
+  },
+  {
+    "developer_id": 10,
+    "experience": "4 years of experienced",
+    "developer_name": "Ella Taylor",
+    "specialization": "Blockchain Developer",
+    "description": "Blockchain developer specializing in building decentralized applications and smart contracts. Proficient in Solidity and Ethereum.",
+    "image_url": "https://i.ibb.co/vLSBrKC/developer10.jpg"
+  },
+  {
+    "developer_id": 11,
+    "experience": "3 years of experienced",
+    "developer_name": "Henry Clark",
+    "specialization": "AI/Machine Learning Engineer",
+    "description": "AI and machine learning engineer passionate about developing intelligent algorithms and models. Skilled in TensorFlow and PyTorch.",
+    "image_url": "https://i.ibb.co/TTrGzRD/developer11.jpg"
+  },
+  {
+    "developer_id": 12,
+    "experience": "8 years of experienced",
+    "developer_name": "Mia Rodriguez",
+    "specialization": "Cybersecurity Expert",
+    "description": "Cybersecurity expert dedicated to safeguarding digital assets and networks. Skilled in penetration testing.",
+    "image_url": "https://i.ibb.co/DQVGfV0/developer12.jpg"
+  }
+]

@@ -1,5 +1,14 @@
 import { useEffect, useState } from "react";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+const aosAnimations = [
+  "fade-up",
+  "fade-left",
+  "fade-right",
+  "fade-down",
+  "zoom-in",
+  "zoom-out",
+];
 const Services = () => {
   const [services, setServices] = useState([]);
   useEffect(() => {
@@ -7,17 +16,28 @@ const Services = () => {
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
+     useEffect(() => {
+       AOS.init({
+         duration: 1000,
+       });
+     }, []);
 
   return (
-    <div className="my-8 md:my-16">
+    <div className="max-w-7xl mx-auto my-8 md:my-16 px-3">
       <div>
-        <h2 className="text-center font-medium text-3xl md:text-5xl">
+        <h2
+          data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          className="text-center font-medium text-3xl md:text-5xl"
+        >
           Our services for client.
         </h2>
       </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 md:my-8">
-        {services.map((service) => (
-          <div
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 md:my-8">
+        {services.map((service, index) => (
+          <div 
+            data-aos={aosAnimations[index % aosAnimations.length]}
+            data-aos-anchor-placement="top-bottom"
             className="border border-gray-300 rounded-xl"
             key={service.service_id}
             style={{

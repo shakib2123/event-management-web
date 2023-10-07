@@ -31,10 +31,7 @@ const Navbar = () => {
     });
   }, []);
   return (
-    <div
-      className="w-full py-5 sticky top-0 lg:backdrop-blur-lg"
-      data-aos="fade-down"
-    >
+    <div className="w-full py-5 lg:backdrop-blur-lg">
       <div className="navbar bg-transparent  text-white max-w-7xl mx-auto ">
         <div className="navbar-start">
           <div className="dropdown">
@@ -62,7 +59,7 @@ const Navbar = () => {
             </ul>
           </div>
           <a className=" text-xl md:text-4xl cursor-pointer font-medium">
-            <span className="text-purple-700">TECH</span>Wise
+            <span className="text-purple-700">TECH</span> WISE
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
