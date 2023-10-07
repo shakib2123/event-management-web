@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Experts from "../Pages/Experts/Experts";
 import ServiceDetail from "../Components/Services/ServiceDetail";
+import Shop from "../Pages/Shop/Shop";
 
 const Router = createBrowserRouter([
   {
@@ -31,9 +32,13 @@ const Router = createBrowserRouter([
         element: <Experts></Experts>,
       },
       {
-          path: "/serviceDetail/:id",
-          loader: ()=> fetch('/services.json'),
+        path: "/serviceDetail/:id",
+        loader: () => fetch("/services.json"),
         element: <ServiceDetail></ServiceDetail>,
+      },
+      {
+        path: "/shop",
+        element: <Shop></Shop>,
       },
     ],
   },

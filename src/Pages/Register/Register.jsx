@@ -2,6 +2,7 @@ import "./Register.css";
 import { IoIosMail } from "react-icons/io";
 import { FaUserEdit } from "react-icons/fa";
 import {
+  BsCardImage,
   BsFacebook,
   BsGithub,
   BsInstagram,
@@ -24,7 +25,7 @@ const Register = () => {
               Sign Up
             </h2>
             <div
-              className="input-box relative w-72 my-6  border-b-2 flex"
+              className="input-box relative w-72 my-4  border-b-2 flex"
               title="Type your name..."
             >
               <span>
@@ -42,7 +43,25 @@ const Register = () => {
               </label>
             </div>
             <div
-              className="input-box relative w-72 my-6  border-b-2 flex"
+              className="input-box relative w-72 my-4  border-b-2 flex"
+              title="Type your photo..."
+            >
+              <span>
+                <BsCardImage className="absolute right-2 text-white text-lg bottom-4"></BsCardImage>
+              </span>
+              <input
+                className="w-full h-9 bg-transparent border-none outline-none text-white pl-1 pr-8"
+                type="text"
+                name=""
+                id=""
+                required
+              />
+              <label className="absolute top-1/2 left-1 -translate-y-1/2 text-white transition duration-500">
+                Photo URL
+              </label>
+            </div>
+            <div
+              className="input-box relative w-72 my-4  border-b-2 flex"
               title="Type your email..."
             >
               <span>
@@ -60,7 +79,7 @@ const Register = () => {
               </label>
             </div>
             <div
-              className="input-box relative w-72 my-6  border-b-2 flex"
+              className="input-box relative w-72 my-4  border-b-2 flex"
               title="Type your password..."
             >
               <span>
@@ -77,7 +96,7 @@ const Register = () => {
                 Password
               </label>
             </div>
-            <div className="mb-3 text-white ">
+            <div className="mb-2 text-white ">
               <label>
                 <input
                   className="mr-1"
@@ -95,13 +114,13 @@ const Register = () => {
             >
               Sign up
             </button>
-            <div className="lg:mt-3">
+            <div className="lg:mt-2">
               <div className="flex justify-center">
-                <h2 className="px-1 font-semibold text-xl my-2 text-white">
+                <h2 className="px-1 font-semibold text-xl my-1 text-white">
                   Or
                 </h2>
               </div>
-              <div className="flex justify-around lg:mt-4">
+              <div className="flex justify-around lg:mt-3">
                 <p className="bg-white w-fit p-1 rounded-full text-2xl hover:cursor-pointer">
                   <FcGoogle></FcGoogle>
                 </p>
@@ -119,7 +138,7 @@ const Register = () => {
                 </p>
               </div>
             </div>
-            <div className="register-link my-3 lg:my-5 text-center text-white">
+            <div className="register-link my-2 lg:my-5 text-center text-white">
               <p className="text-white no-underline">
                 Already have an account?
                 <Link className="font-medium hover:underline mx-2" to="/login">
