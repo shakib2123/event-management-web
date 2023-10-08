@@ -122,9 +122,9 @@ console.log(count);
 <details><summary><b>Answer</b></summary>
 <p>
 
-#### Answer: 2
+#### Answer: 3
 
-<i>In the provided code, the forEach method iterates over each element in the nums array. However, the if (num) condition checks whether num is truthy or not. Since 0 is considered falsy in JavaScript, it won't increment the count when num is 0. Therefore, count will only be incremented for the values 1, 2, and 3, resulting in a final value of 2.</i>
+<i>The correct answer is C: 3. This is because the first element of the array is 0, which is falsy in JavaScript, so the count variable is not incremented. The rest of the elements are 1, 2, 3, which are all truthy, so the count variable is incremented by 1 for each of them. Therefore, the final value of count is 3, and that is what is logged to the console.</i>
 
 </p>
 </details>
