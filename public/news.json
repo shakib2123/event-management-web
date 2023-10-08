@@ -1,0 +1,164 @@
+[
+  {
+    "id": 1,
+    "title": "New AI-powered Robot Unveiled at CES 2023",
+    "category": "Robotics",
+    "date": "2023-01-10",
+    "description": "A groundbreaking AI-powered robot was showcased at CES 2023, demonstrating its capabilities in various industries.",
+    "source": "TechNews"
+
+  },
+  {
+    "id": 2,
+    "title": "5G Network Expansion Plans Announced by Major Telecom Companies",
+    "category": "Telecommunications",
+    "date": "2023-02-15",
+    "description": "Leading telecom companies have revealed their plans for expanding 5G networks, promising faster and more reliable connectivity.",
+    "source": "Tech Today"
+  },
+  {
+    "id": 3,
+    "title": "Tech Startup Secures $50 Million in Funding Round",
+    "category": "Startups",
+    "date": "2023-03-22",
+    "description": "A promising tech startup announced the successful closure of a $50 million funding round, fueling its growth plans.",
+    "source": "TechInvest"
+  },
+  {
+    "id": 4,
+    "title": "Quantum Computing Breakthrough: Solving Complex Problems in Seconds",
+    "category": "Quantum Computing",
+    "date": "2023-04-08",
+    "description": "Researchers achieved a quantum computing breakthrough, enabling the rapid solution of complex problems with quantum algorithms.",
+    "source": "QuantumTech"
+  },
+  {
+    "id": 5,
+    "title": "Major Data Breach at Tech Giant Exposes Millions of User Records",
+    "category": "Security",
+    "date": "2023-05-20",
+    "description": "A major tech company experienced a data breach, exposing sensitive user information and raising concerns about cybersecurity.",
+    "source": "CyberAlert"
+  },
+  {
+    "id": 6,
+    "title": "Electric Vehicle Sales Skyrocket in 2023",
+    "category": "Automotive",
+    "date": "2023-06-12",
+    "description": "The year 2023 witnessed a significant increase in electric vehicle sales as consumers embrace sustainable transportation.",
+    "source": "EVNews"
+  },
+  {
+    "id": 7,
+    "title": "SpaceX Launches Mission to Explore Mars",
+    "category": "Space",
+    "date": "2023-07-30",
+    "description": "SpaceX successfully launched a mission to explore Mars, marking a significant step in space exploration.",
+    "source": "SpaceNews"
+  },
+  {
+    "id": 8,
+    "title": "Tech Companies Collaborate to Combat Climate Change",
+    "category": "Environment",
+    "date": "2023-08-18",
+    "description": "Leading tech companies joined forces to develop innovative solutions for combating climate change and reducing carbon emissions.",
+    "source": "GreenTech"
+  },
+  {
+    "id": 9,
+    "title": "Augmented Reality Glasses Gain Popularity",
+    "category": "AR/VR",
+    "date": "2023-09-05",
+    "description": "Augmented reality glasses became a must-have tech accessory, offering immersive experiences and practical applications.",
+    "source": "ARWorld"
+  },
+  {
+    "id": 10,
+    "title": "Tech Leaders Discuss the Future of Artificial Intelligence",
+    "category": "AI",
+    "date": "2023-10-14",
+    "description": "Prominent tech leaders gathered to discuss the future of artificial intelligence and its impact on society.",
+    "source": "TechSummit"
+  },
+  {
+    "id": 11,
+    "title": "New Gaming Consoles Set to Revolutionize the Gaming Industry",
+    "category": "Gaming",
+    "date": "2023-11-22",
+    "description": "Upcoming gaming consoles promise to revolutionize the gaming industry with advanced graphics and immersive experiences.",
+    "source": "GameWorld"
+  },
+  {
+    "id": 12,
+    "title": "Tech Innovations in Healthcare Improve Patient Care",
+    "category": "Healthcare",
+    "date": "2023-12-10",
+    "description": "Innovations in technology are transforming healthcare, leading to improved patient care and treatment outcomes.",
+    "source": "MedTech"
+  },
+  {
+    "id": 13,
+    "title": "Self-Driving Cars Take the Streets in 2023",
+    "category": "Automotive",
+    "date": "2023-01-28",
+    "description": "Self-driving cars become a common sight on roads as companies roll out autonomous vehicle services.",
+    "source": "AutoTech"
+  },
+  {
+    "id": 14,
+    "title": "AI-Powered Virtual Assistants Redefine Customer Support",
+    "category": "Artificial Intelligence",
+    "date": "2023-02-12",
+    "description": "AI-powered virtual assistants are changing the way businesses provide customer support with automated solutions.",
+    "source": "AIInsights"
+  },
+  {
+    "id": 15,
+    "title": "New Breakthrough in Renewable Energy Generation",
+    "category": "Energy",
+    "date": "2023-03-05",
+    "description": "Researchers achieve a significant breakthrough in renewable energy generation technology, paving the way for cleaner and more sustainable power sources.",
+    "source": "RenewableTech"
+  },
+  {
+    "id": 16,
+    "title": "Blockchain Technology Gains Traction in Supply Chain Management",
+    "category": "Blockchain",
+    "date": "2023-04-17",
+    "description": "Companies adopt blockchain technology to enhance transparency and efficiency in supply chain management.",
+    "source": "BlockNews"
+  },
+  {
+    "id": 17,
+    "title": "Tech Giants Announce Collaboration on Space Exploration",
+    "category": "Space",
+    "date": "2023-05-30",
+    "description": "Leading tech companies join forces to fund and support ambitious space exploration missions.",
+    "source": "SpaceTech"
+  },
+  {
+    "id": 18,
+    "title": "Advancements in 3D Printing Revolutionize Manufacturing",
+    "category": "3D Printing",
+    "date": "2023-06-25",
+    "description": "New developments in 3D printing technology lead to cost-effective and efficient manufacturing processes.",
+    "source": "3DInnovate"
+
+  },
+  {
+    "id": 19,
+    "title": "Robotic Exoskeletons Improve Mobility for Disabled Individuals",
+    "category": "Robotics",
+    "date": "2023-07-14",
+    "description": "Advanced robotic exoskeletons offer enhanced mobility and independence to individuals with disabilities.",
+    "source": "RoboTech"
+  },
+  {
+    "id": 20,
+    "title": "Smart Cities of the Future: IoT Integration and Urban Planning",
+    "category": "IoT",
+    "date": "2023-08-03",
+    "description": "Cities worldwide are embracing IoT technology to create smarter and more efficient urban environments.",
+    "source": "SmartCity"
+  }
+]

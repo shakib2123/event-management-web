@@ -8,7 +8,9 @@ const navLinks = (
     <li className="p-2 font-medium text-lg">
       <NavLink to="/">Home</NavLink>
     </li>
-
+    <li className="p-2 font-medium text-lg">
+      <NavLink to="/discovery">Discovery</NavLink>
+    </li>
     <li className="p-2 font-medium text-lg">
       <NavLink to="/developers">Developers</NavLink>
     </li>

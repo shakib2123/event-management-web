@@ -24,7 +24,7 @@ const ServiceDetailCard = ({ service }) => {
     }
   };
   return (
-    <div className="card lg:card-side text-white hover:bg-gradient-to-r from-indigo-500 md:border-2  hover:border-blue-500 shadow-xl">
+    <div className="card lg:card-side text-white hover:bg-gradient-to-r from-indigo-500 md:border-2  hover:border-blue-500 shadow-xl w-full  md:w-5/6">
       <figure className="h-96 w-full lg:w-96">
         <img className="h-full w-full" src={image_url} alt={product_name} />
       </figure>

@@ -16,7 +16,7 @@ const Banner = () => {
           <h1 className="mb-5 text-2xl md:text-6xl font-bold">
             Explore Our Services or <br /> Get Started Today!
           </h1>
-          <p className="mb-5 max-w-xl mx-auto text-xl font-semibold">
+          <p className="mb-5 max-w-xl mx-auto md:text-xl font-semibold">
             Experience TechWise Solutions - Your Premium Destination for Tech
             Excellence. Elevate your digital journey to unparalleled heights
             with our comprehensive range of tech services and solutions.

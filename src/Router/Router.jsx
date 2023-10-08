@@ -9,6 +9,7 @@ import ServiceDetail from "../Components/Services/ServiceDetail";
 import Shop from "../Pages/Shop/Shop";
 import WhatWeDoCardDetails from "../Components/Futuristic/WhatWeDoCardDetails";
 import Developers from "../Pages/Developers/Developers";
+import Discovery from "../Pages/Discovery/Discovery";
 
 const Router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ const Router = createBrowserRouter([
       {
         path: "/developers",
         element: <Developers></Developers>,
+      },
+      {
+        path: "/discovery",
+        element: <Discovery></Discovery>,
       },
     ],
   },

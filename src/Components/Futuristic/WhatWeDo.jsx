@@ -4,12 +4,12 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 const aosAnimations = ["fade-up", "fade-down"];
-const Futuristic = () => {
-  const [futuristic, setFuturistic] = useState([]);
+const WhatWeDo = () => {
+  const [whatWeDo, setWhatWeDo] = useState([]);
   useEffect(() => {
     fetch("/whatWeDo.json")
       .then((res) => res.json())
-      .then((data) => setFuturistic(data));
+      .then((data) => setWhatWeDo(data));
   }, []);
   useEffect(() => {
     AOS.init({
@@ -29,7 +29,7 @@ const Futuristic = () => {
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4 md:my-8">
-        {futuristic.map((service, index) => (
+        {whatWeDo.map((service, index) => (
           <div
             data-aos={aosAnimations[index % aosAnimations.length]}
             data-aos-anchor-placement="top-bottom"
@@ -74,4 +74,4 @@ const Futuristic = () => {
   );
 };
 
-export default Futuristic;
+export default WhatWeDo;

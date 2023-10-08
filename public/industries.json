@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "category": "Development Services",
+    "description": "We're excited to announce the launch of our new software development services, tailored to meet your business needs.",
+    "image_url": "https://i.ibb.co/Nm2Y3Vr/development.jpg"
+  },
+  {
+    "id": 2,
+    "category": "AI Learning",
+    "description": "Discover how AI learning can transform your business. Explore its applications and benefits.",
+    "image_url": "https://i.ibb.co/3RfC0zC/ai-learning.jpg"
+  },
+  {
+    "id": 3,
+    "category": "Tech Accessories",
+    "description": "Our commitment to innovation shines through in every tech accessory we create.",
+    "image_url": "https://i.ibb.co/Q9rkhLB/tech-accorsoies.jpg"
+  }
+]
