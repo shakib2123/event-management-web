@@ -114,20 +114,21 @@ const Login = () => {
               <div className="flex justify-around lg:mt-3">
                 <button
                   onClick={() => {
-                    socialLogin(googleLogin);
-                  }}
-                  className="bg-white w-fit p-1 rounded-full text-2xl hover:cursor-pointer"
-                >
-                  <FcGoogle></FcGoogle>
-                </button>
-                <button
-                  onClick={() => {
                     socialLogin(githubLogin);
                   }}
                   className="bg-white w-fit p-1 rounded-full text-2xl text-black hover:cursor-pointer"
                 >
                   <BsGithub></BsGithub>
                 </button>
+                <button
+                  onClick={() => {
+                    socialLogin(googleLogin);
+                  }}
+                  className="bg-white w-fit p-1 rounded-full text-2xl hover:cursor-pointer"
+                >
+                  <FcGoogle></FcGoogle>
+                </button>
+
                 <button className="bg-white w-fit p-1 rounded-full text-2xl text-blue-600 hover:cursor-pointer">
                   <BsFacebook></BsFacebook>
                 </button>
