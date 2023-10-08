@@ -4,6 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+
 const navLinks = (
   <>
     <li className="p-2 font-medium text-lg">
@@ -12,12 +13,15 @@ const navLinks = (
     <li className="p-2 font-medium text-lg">
       <NavLink to="/discovery">Discovery</NavLink>
     </li>
-    <li className="p-2 font-medium text-lg">
-      <NavLink to="/developers">Developers</NavLink>
-    </li>
-    <li className="p-2 font-medium text-lg">
-      <NavLink to="/shop">Shop</NavLink>
-    </li>
+
+    <>
+      <li className="p-2 font-medium text-lg">
+        <NavLink to="/developers">Developers</NavLink>
+      </li>
+      <li className="p-2 font-medium text-lg">
+        <NavLink to="/shop">Shop</NavLink>
+      </li>
+    </>
   </>
 );
 
@@ -73,7 +77,13 @@ const Navbar = () => {
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-10 rounded-full">
-                  <img src={user.photoURL} />
+                  <img
+                    src={
+                      user.photoURL
+                        ? user.photoURL
+                        : "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    }
+                  />
                 </div>
               </label>
               <ul
@@ -81,9 +91,7 @@ const Navbar = () => {
                 className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
               >
                 <li>
-                  <p className="text-lg">
-                    User: {user.displayName ? user.displayName : "Unknown"}
-                  </p>
+                  <p>User: {user.displayName ? user.displayName : "Unknown"}</p>
                 </li>
                 <li>
                   <a onClick={handleLogOut}>Logout</a>

@@ -10,6 +10,7 @@ import Shop from "../Pages/Shop/Shop";
 import WhatWeDoCardDetails from "../Components/Futuristic/WhatWeDoCardDetails";
 import Developers from "../Pages/Developers/Developers";
 import Discovery from "../Pages/Discovery/Discovery";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const Router = createBrowserRouter([
   {
@@ -32,25 +33,45 @@ const Router = createBrowserRouter([
       {
         path: "/experts",
         loader: () => fetch("/experts.json"),
-        element: <Experts></Experts>,
+        element: (
+          <PrivateRoute>
+            <Experts></Experts>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/serviceDetail/:id",
         loader: () => fetch("/services.json"),
-        element: <ServiceDetail></ServiceDetail>,
+        element: (
+          <PrivateRoute>
+            <ServiceDetail></ServiceDetail>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/shop",
-        element: <Shop></Shop>,
+        element: (
+          <PrivateRoute>
+            <Shop></Shop>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/whatWeDo/:id",
         loader: () => fetch("/whatWeDo.json"),
-        element: <WhatWeDoCardDetails></WhatWeDoCardDetails>,
+        element: (
+          <PrivateRoute>
+            <WhatWeDoCardDetails></WhatWeDoCardDetails>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/developers",
-        element: <Developers></Developers>,
+        element: (
+          <PrivateRoute>
+            <Developers></Developers>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/discovery",

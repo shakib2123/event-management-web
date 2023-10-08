@@ -8,14 +8,15 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import swal from "sweetalert";
 import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
-  const { logIn } = useContext(AuthContext);
+  const { logIn, googleLogin, githubLogin } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -24,7 +25,15 @@ const Login = () => {
     logIn(email, password)
       .then((res) => {
         swal("Success!!", "Sign up successfully!", "success");
-        navigate("/");
+        navigate(location.state ? location.state : "/");
+      })
+      .catch((err) => toast(err.message));
+  };
+  const socialLogin = (media) => {
+    media()
+      .then((res) => {
+         navigate(location.state ? location.state : "/");
+        swal("Success!!", "Sign up successfully!", "success");
       })
       .catch((err) => toast(err.message));
   };
@@ -102,22 +111,32 @@ const Login = () => {
                   Or
                 </h2>
               </div>
-              <div className="flex justify-around lg:mt-4">
-                <p className="bg-white w-fit p-1 rounded-full text-2xl hover:cursor-pointer">
+              <div className="flex justify-around lg:mt-3">
+                <button
+                  onClick={() => {
+                    socialLogin(googleLogin);
+                  }}
+                  className="bg-white w-fit p-1 rounded-full text-2xl hover:cursor-pointer"
+                >
                   <FcGoogle></FcGoogle>
-                </p>
-                <p className="bg-white w-fit p-1 rounded-full text-2xl text-black hover:cursor-pointer">
+                </button>
+                <button
+                  onClick={() => {
+                    socialLogin(githubLogin);
+                  }}
+                  className="bg-white w-fit p-1 rounded-full text-2xl text-black hover:cursor-pointer"
+                >
                   <BsGithub></BsGithub>
-                </p>
-                <p className="bg-white w-fit p-1 rounded-full text-2xl text-blue-600 hover:cursor-pointer">
+                </button>
+                <button className="bg-white w-fit p-1 rounded-full text-2xl text-blue-600 hover:cursor-pointer">
                   <BsFacebook></BsFacebook>
-                </p>
-                <p className="bg-white w-fit p-1 rounded-full text-2xl text-pink-600 hover:cursor-pointer">
+                </button>
+                <button className="bg-white w-fit p-1 rounded-full text-2xl text-pink-600 hover:cursor-pointer">
                   <BsInstagram></BsInstagram>
-                </p>
-                <p className="bg-white w-fit p-1 rounded-full text-2xl text-blue-600 hover:cursor-pointer">
+                </button>
+                <button className="bg-white w-fit p-1 rounded-full text-2xl text-blue-600 hover:cursor-pointer">
                   <BsTwitter></BsTwitter>
-                </p>
+                </button>
               </div>
             </div>
             <div className="register-link my-3 lg:my-5 text-center text-white">
