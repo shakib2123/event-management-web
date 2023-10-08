@@ -1,7 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import { BsArrowRightCircleFill } from "react-icons/bs";
+import { BsArrowRightCircleFill, BsBoxArrowInRight } from "react-icons/bs";
 
 const Banner = () => {
   useEffect(() => {
@@ -22,8 +22,9 @@ const Banner = () => {
             with our comprehensive range of tech services and solutions.
             Innovate, transform, and thrive with us!
           </p>
-          <button className="btn btn-primary rounded-full">
-            Get Started <BsArrowRightCircleFill></BsArrowRightCircleFill>
+          <button className="btn btn-primary bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300">
+            See Details
+            <BsBoxArrowInRight className="text-lg"></BsBoxArrowInRight>
           </button>
         </div>
       </div>

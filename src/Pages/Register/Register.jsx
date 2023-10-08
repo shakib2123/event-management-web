@@ -10,9 +10,43 @@ import {
   BsTwitter,
 } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import swal from "sweetalert";
+import toast, { Toaster } from "react-hot-toast";
 
 const Register = () => {
+  const { createUser, profileUpdate } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photo = e.target.photo.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    if (
+      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\]).{8,}$/.test(
+        password
+      )
+    ) {
+      return toast.error(
+        "Password should be at least 6 latter and special character."
+      );
+    }
+    createUser(email, password)
+      .then((result) => {
+        profileUpdate(name, photo)
+          .then((result) => console.log(result.user))
+          .catch((err) => console.log(err));
+        e.target.reset();
+        swal("Success!!", "Sign up successfully!", "success");
+        navigate("/");
+      })
+      .catch((error) => {
+        swal("Error!!", error.message, "error");
+      });
+  };
   return (
     <div
       style={{ backgroundImage: 'url("https://i.ibb.co/yWFNYfw/bg.jpg")' }}
@@ -20,7 +54,7 @@ const Register = () => {
     >
       <section className="flex justify-center items-center w-full h-screen bg-cover bg-center ">
         <div className="h-screen md:h-fit p-3 w-full bg-transparent flex justify-center items-center backdrop-blur-[15px] md:rounded-3xl  md:w-2/3 lg:w-1/3 md:border">
-          <form>
+          <form onSubmit={handleRegister}>
             <h2 className="text-3xl lg:text-4xl text-white text-center font-medium">
               Sign Up
             </h2>
@@ -34,7 +68,7 @@ const Register = () => {
               <input
                 className="w-full h-9 bg-transparent border-none outline-none text-white pl-1 pr-8"
                 type="text"
-                name=""
+                name="name"
                 id=""
                 required
               />
@@ -52,7 +86,7 @@ const Register = () => {
               <input
                 className="w-full h-9 bg-transparent border-none outline-none text-white pl-1 pr-8"
                 type="text"
-                name=""
+                name="photo"
                 id=""
                 required
               />
@@ -70,7 +104,7 @@ const Register = () => {
               <input
                 className="w-full h-9 bg-transparent border-none outline-none text-white pl-1 pr-8"
                 type="email"
-                name=""
+                name="email"
                 id=""
                 required
               />
@@ -88,7 +122,7 @@ const Register = () => {
               <input
                 className="w-full h-9 bg-transparent border-none outline-none text-white pl-1 pr-8"
                 type="password"
-                name=""
+                name="password"
                 id=""
                 required
               />
@@ -149,6 +183,7 @@ const Register = () => {
           </form>
         </div>
       </section>
+      <Toaster />
     </div>
   );
 };

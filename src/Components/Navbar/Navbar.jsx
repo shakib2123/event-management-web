@@ -2,7 +2,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 const navLinks = (
   <>
     <li className="p-2 font-medium text-lg">
@@ -21,11 +22,17 @@ const navLinks = (
 );
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   useEffect(() => {
     AOS.init({
       duration: 1000,
     });
   }, []);
+  const handleLogOut = () => {
+    logOut()
+      .then((res) => console.log(res.user))
+      .catch((err) => console.log(err));
+  };
   return (
     <div className="w-full py-5 lg:backdrop-blur-lg lg:border-b">
       <div className="navbar bg-transparent  text-white max-w-7xl mx-auto ">
@@ -62,16 +69,41 @@ const Navbar = () => {
           <ul className="menu-horizontal px-1 space-x-8">{navLinks}</ul>
         </div>
         <div className="navbar-end">
-          <Link to="/login">
-            <button className="hover:text-gray-400 w-24 h-10 font-semibold text-lg rounded-full text-white">
-              Login
-            </button>
-          </Link>
-          <Link to="/register">
-            <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300 w-24 h-10 font-semibold text-lg rounded-full text-white">
-              Sign up
-            </button>
-          </Link>
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user.photoURL} />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <p className="text-lg">
+                    User: {user.displayName ? user.displayName : "Unknown"}
+                  </p>
+                </li>
+                <li>
+                  <a onClick={handleLogOut}>Logout</a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <div>
+              <Link to="/login">
+                <button className="hover:text-gray-400 w-24 h-10 font-semibold text-lg rounded-full text-white">
+                  Login
+                </button>
+              </Link>
+              <Link to="/register">
+                <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300 w-24 h-10 font-semibold text-lg rounded-full text-white">
+                  Sign up
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
