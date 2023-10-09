@@ -103,6 +103,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Toaster></Toaster>
     </div>
   );
 };
