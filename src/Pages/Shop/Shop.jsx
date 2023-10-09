@@ -14,17 +14,29 @@ const Shop = () => {
   return (
     <div className="min-h-screen">
       <Navbar></Navbar>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-16 gap-4">
-        {isShow
-          ? products?.map((product) => (
-              <ShopCard key={product.product_id} product={product}></ShopCard>
-            ))
-          : products
-              ?.slice(0, 3)
-              .map((product) => (
+      <h2 className="text-center font-semibold text-3xl md:text-5xl mt-8">
+        Product purchased by you.
+      </h2>
+      {products ? (
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-16 gap-4">
+          {isShow
+            ? products?.map((product) => (
                 <ShopCard key={product.product_id} product={product}></ShopCard>
-              ))}
-      </div>
+              ))
+            : products
+                ?.slice(0, 3)
+                .map((product) => (
+                  <ShopCard
+                    key={product.product_id}
+                    product={product}
+                  ></ShopCard>
+                ))}
+        </div>
+      ) : (
+        <div className="my-16">
+          <p className="text-lg text-center">Nothing purchased by you.</p>
+        </div>
+      )}
       {products && products.length > 3 && (
         <div className="flex justify-center pb-9">
           <button

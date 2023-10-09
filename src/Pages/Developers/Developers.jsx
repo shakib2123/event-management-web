@@ -13,23 +13,34 @@ const Developers = () => {
     <div className="min-h-screen">
       <Navbar></Navbar>
       <div className="max-w-7xl mx-auto my-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {isShow
-            ? developers?.map((developer) => (
-                <DeveloperCard
-                  key={developer.developer_id}
-                  developer={developer}
-                ></DeveloperCard>
-              ))
-            : developers
-                ?.slice(0, 4)
-                .map((developer) => (
+        <h2 className="text-3xl md:text-5xl text-center mb-8 font-semibold ">
+          Hired Developers.
+        </h2>
+        {developers ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {isShow
+              ? developers?.map((developer) => (
                   <DeveloperCard
                     key={developer.developer_id}
                     developer={developer}
                   ></DeveloperCard>
-                ))}
-        </div>
+                ))
+              : developers
+                  ?.slice(0, 4)
+                  .map((developer) => (
+                    <DeveloperCard
+                      key={developer.developer_id}
+                      developer={developer}
+                    ></DeveloperCard>
+                  ))}
+          </div>
+        ) : (
+          <div className="my-16">
+            <p className="text-lg text-center">
+              There is no developers hired by you.
+            </p>
+          </div>
+        )}
       </div>
       {developers && developers.length > 4 && (
         <div className="flex justify-center pb-8">

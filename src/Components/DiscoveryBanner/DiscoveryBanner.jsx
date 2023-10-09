@@ -3,14 +3,18 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import { BsBoxArrowInRight } from "react-icons/bs";
 
-const Banner = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
+const DiscoveryBanner = () =>
+{
+      useEffect(() => {
+        AOS.init({
+          duration: 1000,
+        });
+      }, []);
   return (
-    <div className="hero min-h-[80vh] text-white z-10">
+    <div
+      style={{ backgroundImage: "url(https://i.ibb.co/9wQXvTn/92923.jpg)" }}
+      className="hero min-h-[85vh] text-white z-10"
+    >
       <div className="hero-content text-center">
         <div data-aos="fade-up">
           <h1 className="mb-5 text-2xl md:text-6xl font-bold">
@@ -32,4 +36,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default DiscoveryBanner;

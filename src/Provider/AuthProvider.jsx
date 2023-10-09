@@ -27,7 +27,7 @@ const AuthProvider = ({ children }) => {
   };
   const googleLogin = () => {
     setLoader(true);
-    signInWithPopup(auth, googleProvider);
+    return signInWithPopup(auth, googleProvider);
   };
   const githubLogin = () => {
     setLoader(true);

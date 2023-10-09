@@ -9,7 +9,7 @@ const Newses = () => {
       .then((data) => setNewses(data));
   }, []);
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="max-w-2xl space-y-3 mx-auto text-center">
         <h1 className="text-3xl md:text-5xl font-bold">News Feeds</h1>
         <p>
