@@ -1,6 +1,13 @@
-# My Awesome Website
+# Website Name
 
-Welcome to My Awesome Website!.
+Welcome to the official website of [TECH WISE].
+
+
+## Live Site
+
+You can also access the live site [here](https://event-management-12427.web.app/).
+
+
 
 ## Features
 
